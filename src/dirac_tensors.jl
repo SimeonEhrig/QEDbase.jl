@@ -158,3 +158,7 @@ Tensor product of Dirac matrix sandwiched between an adjoint and a standard bi-s
 function mul(aBS::AdjointBiSpinor, DM::DiracMatrix, BS::BiSpinor)::ComplexF64
     return transpose(aBS) * DM * BS
 end
+
+function foo()
+    return 42
+end

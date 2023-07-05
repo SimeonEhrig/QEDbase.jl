@@ -39,6 +39,7 @@ export SFourMomentum, MFourMomentum, isonshell, assert_onshell
 
 export BiSpinor, AdjointBiSpinor, DiracMatrix, mul
 export AbstractDiracVector, AbstractDiracMatrix
+export foo
 
 export gamma, GAMMA, AbstractGammaRepresentation, DiracGammaRepresentation, slashed
 
