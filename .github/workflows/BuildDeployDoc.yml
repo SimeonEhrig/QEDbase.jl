@@ -19,6 +19,10 @@ jobs:
       - uses: julia-actions/setup-julia@v1
         with:
           version: '1.10'
+      - name: Install dependencies
+        run: julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+      - name: set dependencies to dev branch version
+        if: (github.event_name == 'push') || (github.event_name == 'pull_request')
       - name: clone integration test tools
         run: |
           git clone -b setDevDevCompat https://github.com/SimeonEhrig/QED.jl.git /tmp/integration_test_tools
